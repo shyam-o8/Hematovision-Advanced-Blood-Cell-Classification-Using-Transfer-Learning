@@ -1,49 +1,157 @@
-HematoVision-Advanced-Blood-Cell-Classification-Using-Transfer-Learning
-AICTE Internship
+# 🩸 HematoVision – Advanced Blood Cell Classification Using Transfer Learning
 
-Team ID: LTVIP2026TMIDS65951
-Team Size: 4
+**AICTE Internship Project**  
+**Team ID:** LTVIP2026TMIDS65951  
+**Team Size:** 4  
 
-Team Leader: Mekala Vishnu Vardhan Team Members: -Nizampatnam Shyam Prasad -Orsu Naga Yashaswini -Pulimi Jaswitha
+---
 
-Project Overview
-Hematovision is a deep learning project designed to classify blood cell images into four distinct categories: Eosinophil, Lymphocyte, Monocyte, and Neutrophil. The project utilizes Transfer Learning with the MobileNetV2 architecture to achieve high accuracy. It includes a training script to build the model and a Flask-based web application for user-friendly interaction.
+## 👥 Team Details
 
-Technologies Used
-Python
-TensorFlow / Keras (Deep Learning)
-MobileNetV2 (Transfer Learning Model)
-Flask (Web Framework)
-HTML/CSS (Frontend)
-Dataset
+**Team Leader:** Mekala Vishnu Vardhan  
+
+**Team Members:**  
+- Nizampatnam Shyam Prasad  
+- Orsu Naga Yashaswini  
+- Pulimi Jaswitha  
+
+---
+
+## 📌 Project Overview
+
+HematoVision is a deep learning-based image classification system that classifies microscopic blood cell images into four categories:
+
+- Eosinophil  
+- Lymphocyte  
+- Monocyte  
+- Neutrophil  
+
+The project uses Transfer Learning with the MobileNetV2 architecture to achieve high accuracy.  
+It includes a model training pipeline and a Flask-based web application for real-time predictions.
+
+---
+
+## 🛠️ Technologies Used
+
+- Python  
+- TensorFlow / Keras  
+- MobileNetV2 (Transfer Learning)  
+- Flask  
+- HTML / CSS  
+
+---
+
+## 📂 Dataset
+
 This project uses the Blood Cell Images Dataset from Kaggle.
 
-Dataset Setup
-Download the dataset from Kaggle.
-Extract the files.
-Create a folder named dataset inside the Project files directory.
-Organize the folders as follows:
+### Dataset Setup
+
+1. Download the dataset from Kaggle.  
+2. Extract the files.  
+3. Create a folder named `dataset` inside the **Project files** directory.  
+4. Organize the folders as shown below:
+
+```
 Project files/
+│
 ├── dataset/
 │   ├── TRAIN/
 │   │   ├── EOSINOPHIL/
-│   │   ├── ...
+│   │   ├── LYMPHOCYTE/
+│   │   ├── MONOCYTE/
+│   │   └── NEUTROPHIL/
+│   │
 │   └── TEST/
 │       ├── EOSINOPHIL/
-│       ├── ...
-Installation
-Navigate to the project directory.
-Install the required dependencies:
-pip install -r "Project files/requirements.txt"
-Usage
-1. Training the Model
-To train the model from scratch, run the app.py script. This will generate the blood_cell_classifier_mobilenetv2.h5 file.
+│       ├── LYMPHOCYTE/
+│       ├── MONOCYTE/
+│       └── NEUTROPHIL/
+│
+├── app.py
+├── web_app.py
+├── requirements.txt
+└── blood_cell_classifier_mobilenetv2.h5
+```
 
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/HematoVision-Advanced-Blood-Cell-Classification-Using-Transfer-Learning.git
+cd HematoVision-Advanced-Blood-Cell-Classification-Using-Transfer-Learning
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r "Project files/requirements.txt"
+```
+
+---
+
+## 🚀 Usage
+
+### 🔹 1. Train the Model
+
+Run the following command to train the model:
+
+```bash
 cd "Project files"
 python app.py
-2. Running the Web Application
-Once the model is trained, you can start the web interface to classify new images.
+```
 
+After training, the model file will be generated:
+
+```
+blood_cell_classifier_mobilenetv2.h5
+```
+
+---
+
+### 🔹 2. Run the Web Application
+
+Start the Flask server:
+
+```bash
 cd "Project files"
 python web_app.py
-Open your browser and go to http://127.0.0.1:5000.
+```
+
+Open your browser and go to:
+
+```
+http://127.0.0.1:5000
+```
+
+Upload a blood cell image to get the predicted result.
+
+---
+
+## 🧠 Model Details
+
+- Base Model: MobileNetV2  
+- Pretrained on ImageNet  
+- Custom classification head  
+- Softmax activation (4 output classes)  
+- Fine-tuned for improved performance  
+
+---
+
+## 📊 Output Classes
+
+The model classifies images into:
+
+1. Eosinophil  
+2. Lymphocyte  
+3. Monocyte  
+4. Neutrophil  
+
+---
+
+## 📜 License
+
+This project was developed as part of the AICTE Internship Program for academic and educational purposes.
