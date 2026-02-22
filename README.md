@@ -81,7 +81,7 @@ Project files/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/HematoVision-Advanced-Blood-Cell-Classification-Using-Transfer-Learning.git
+git clone https://github.com/shyam-o8/HematoVision-Advanced-Blood-Cell-Classification-Using-Transfer-Learning.git
 cd HematoVision-Advanced-Blood-Cell-Classification-Using-Transfer-Learning
 ```
 
